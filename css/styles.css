@@ -1,0 +1,869 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+li {
+  padding: 0;
+  margin: 0;
+}
+body {
+  max-width: 1600px;
+  background-color: var(--white-text);
+}
+a {
+  text-decoration: none;
+
+  /*Поїхали :)  */
+}
+.header {
+  background-color: var(--white-text);
+  border-bottom: 1px solid #ececec;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  text-align: center;
+
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+}
+.ul-link {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
+.logo-web {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  color: var(--blue-text);
+  font-size: 26px;
+  letter-spacing: 0.03;
+  line-height: 1.15;
+}
+
+.logo-studio {
+  padding-right: 43px;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  color: var(--black-dark-text);
+  font-size: 26px;
+  letter-spacing: 0.03;
+  line-height: 1.15;
+}
+.logo-studio-white {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  color: var(--white-text);
+  font-size: 26px;
+  letter-spacing: 0.03em;
+}
+.active .nav-logo {
+  color: var(--blue-text);
+  position: relative;
+  display: block;
+}
+.active .nav-logo::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--blue-text);
+  border-radius: 2px;
+  position: absolute;
+  bottom: -1px;
+}
+.nav-logo {
+  margin-left: 50px;
+  padding: 32px 0;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--black-text);
+  letter-spacing: 0.02em;
+}
+.nav-contacts:hover {
+  color: var(--blue-text);
+  transition: color 250ms var(--cubic);
+}
+.nav-contacts {
+  display: flex;
+  padding-left: 50px;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--grey-text);
+  letter-spacing: 0.02em;
+  justify-content: center;
+  align-items: center;
+}
+.svg-contacts {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+/* -----------Блок героя--------- */
+
+.hero {
+  background-color: var(--dark-grey-bac);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/bac/Img-bac-hero.jpg);
+  background-repeat: no-repeat;
+  max-width: 1600px;
+  text-align: center;
+}
+.container-hero {
+  padding: 200px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.hero-text {
+  font-family: "roboto";
+  font-size: 44px;
+  font-weight: 900;
+  color: var(--white-text);
+  text-transform: uppercase;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+}
+
+.button-zakaz {
+  margin-top: 30px;
+  border: 0;
+  padding: 10px 32px;
+  background-color: var(--blue-text);
+  color: var(--white-text);
+  display: inline-block;
+  border-radius: 4px;
+  font-family: "roboto";
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  line-height: 1.87;
+  transition: background-color 250ms var(--cubic), color 250ms var(--cubic),
+    box-shadow 250ms var(--cubic);
+}
+.button-zakaz:hover {
+  color: var(--blue-text);
+  letter-spacing: 0.06em;
+  background-color: var(--white-text);
+}
+.hide {
+  height: 0px;
+  overflow: hidden;
+  /* -----М-о-д-а-л-к-а------- */
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--zatemnenya);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 250ms var(--cubic);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: visible;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.modal {
+  padding: 40px;
+  width: 528px;
+  height: 582px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  background-color: var(--white-text);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms var(--cubic);
+}
+
+.modal .closed {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  display: flex;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  fill: var(--black);
+}
+.modal .closed:hover,
+.modal .closed:focus {
+  fill: var(--blue-text);
+}
+
+.form-title {
+  justify-content: space-between;
+  font-family: "roboto";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.form {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form-field {
+  display: block;
+  position: relative;
+  justify-content: center;
+}
+.form-field:nth-child(-n + 3) {
+  margin-bottom: 28px;
+}
+
+.form-label {
+  position: absolute;
+  top: -50%;
+  left: 0px;
+  color: var(--grey-text);
+}
+
+.form-input {
+  padding: 10px 10px 10px 40px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.16;
+  font: inherit;
+  border-radius: 4px;
+  border: 1px solid var(--border-modal-color);
+}
+.form-input:hover,
+.form-input:focus {
+  border: 1px solid var(--blue-text);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  fill: var(--black-text);
+}
+.form-input:focus ~ .icon,
+.form-input:hover ~ .icon {
+  fill: var(--blue-text);
+}
+.form-textarea {
+  width: 100%;
+  border: 1px solid var(--border-modal-color);
+  padding: 12px;
+  display: block;
+  resize: none;
+}
+.form-textarea:hover {
+  border-color: var(--blue-text);
+}
+.form-field .coment {
+  display: flex;
+
+  top: -50%;
+  color: var(--grey-text);
+  transform: translateY(-3px);
+}
+.form-textarea::placeholder {
+  font-family: "Roboto";
+  color: var(--placeholder);
+  font-size: 14px;
+  line-height: 1.16;
+}
+/* ------------------------ */
+
+.text-agree {
+  color: var(--grey-text);
+  font-family: "roboto";
+  font-size: 14px;
+  line-height: 1.714;
+  margin-left: 7px;
+  margin-right: 2px;
+}
+.submit {
+  margin-top: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  width: 200px;
+  height: 50px;
+  background-color: var(--blue-text);
+  color: var(--buutom-bac);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.deal {
+  color: var(--blue-text);
+  margin-left: 2px;
+  font-family: "roboto";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+}
+.checkbox {
+  /* appearance: none; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.check-icon {
+  border: 2px solid var(--black-text);
+  border-radius: 2px;
+  margin-top: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transform: translateY(2px);
+}
+.checkbox:checked + .check-icon {
+  border-color: transparent;
+  background-size: contain;
+  background-origin: border-box;
+  background-color: var(--blue-text);
+  box-shadow: none;
+}
+
+/* --------Блок лапші--------- */
+
+.container-approach {
+  padding: 94px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.ul-approach {
+  display: flex;
+  justify-content: space-between;
+}
+.con-approach-svg {
+  padding: 25px 0 25px;
+  margin-bottom: 30px;
+  background-color: var(--buutom-bac);
+  border-radius: 4px;
+}
+.approach-svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.approach {
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--black-text);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  line-height: 1.14;
+}
+.approach-text {
+  max-width: 270px;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--grey-text);
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+}
+
+/*---- Блок Чим Займаємось ------ */
+
+.container-what-we-do {
+  margin-bottom: 94px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.what-we-do {
+  padding-bottom: 50px;
+  text-align: center;
+  font-family: "roboto";
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black-text);
+  letter-spacing: 0.03em;
+  line-height: 1.16;
+}
+.img-container {
+  justify-content: space-between;
+  display: flex;
+}
+
+/* ---Наша команда--- */
+
+.our-them {
+  background-color: var(--buutom-bac);
+}
+.container-them {
+  padding: 94px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.team {
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: "roboto";
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black-text);
+  letter-spacing: 0.03em;
+  line-height: 1.16;
+}
+.team-name {
+  margin-bottom: 10px;
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black-dark-textt);
+  letter-spacing: 0.03em;
+  line-height: 1.18;
+}
+.team-text {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--grey-text);
+  letter-spacing: 0.03em;
+  line-height: 1.18;
+}
+.ul-svg-links {
+  margin-top: 16px;
+  max-width: 270px;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-around;
+}
+.social-link {
+  color: var(--social-networks);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  fill: var(--social-networks);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.svg-links {
+  justify-content: center;
+  align-items: center;
+  fill: currentColor;
+}
+
+.social-link:hover {
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: var(--blue-text);
+}
+
+/* Карточки команди */
+
+.card-team {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--team-card-set-gap));
+  margin-top: calc(-1 * var(--team-card-set-gap));
+}
+.card-team > .item {
+  flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-left: var(--team-card-set-gap);
+  margin-top: var(--team-card-set-gap);
+}
+
+.team-card {
+  margin-bottom: 94px;
+  box-shadow: var(--team-card-shadow);
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+  background-color: var(--white-text);
+}
+
+.team-card-content {
+  text-align: center;
+  padding: 30px 32px;
+}
+/*  Постійні клієнти */
+
+.client {
+  padding: 94px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  text-align: center;
+}
+.title-client {
+  margin-bottom: 50px;
+  font-family: "roboto";
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black-text);
+  letter-spacing: 0.03em;
+  line-height: 1.16;
+}
+.ul-client {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.client-link {
+  fill: var(--social-networks);
+  background-color: transparent;
+}
+.con-client-svg {
+  width: 170px;
+  height: 90px;
+  border-radius: 4px;
+  border: 2px solid currentColor;
+  color: var(--social-networks);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.con-client-svg:hover {
+  border-color: var(--blue-text);
+  fill: var(--blue-text);
+}
+
+/* ----------Підвал------ */
+
+.footer {
+  background-color: var(--dark-grey-bac);
+}
+.containers-footer {
+  display: flex;
+  padding: 60px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container-address {
+  margin-right: 70px;
+}
+.logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.map {
+  display: inline-block;
+  margin-bottom: 9px;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--white-text);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+}
+.footer-address {
+  display: inline-block;
+  margin-bottom: 9px;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--grey-text-op60);
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+}
+.address {
+  font-style: normal;
+}
+.footer-title {
+  color: var(--white-text);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.16;
+}
+.con-footer-link {
+  width: 206px;
+}
+/* ---------Подписка---------- */
+.subscription {
+  margin-left: 50px;
+}
+.sing-title {
+  color: #ffffff;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.sign-imput {
+  width: 358px;
+  margin-top: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  padding: 15px;
+}
+.sign-imput::placeholder {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 400;
+}
+.sign {
+  align-items: center;
+  margin-left: 12px;
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: var(--blue-text);
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  padding: 6px 0 10px 29px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+.svg-litachok {
+  margin-right: 28px;
+  margin-left: 10px;
+  transform: translateY(7px);
+}
+/* -------------------------- */
+/* --------Portfolio ---------*/
+/* -------------------------- */
+
+.portfolio {
+  padding: 94px 0;
+}
+.container-portfolio {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.ul-button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding-bottom: 34px;
+}
+.portfol-button {
+  padding: 6px 22px;
+  margin-right: 8px;
+  background-color: var(--buutom-bac);
+  border: 0;
+  border-radius: 4px;
+
+  color: var(--black-text);
+  font-family: "roboto";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 1.62;
+}
+.portfol-button:hover {
+  color: var(--white-text);
+  background-color: var(--blue-text);
+  border: 0;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+/* Головнй контент */
+.project-name {
+  font-family: "roboto";
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--black-text);
+  line-height: 2;
+}
+.signature {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--grey-text);
+  line-height: 1.87;
+}
+/*Карточки головного контенту   */
+/* CARD SET */
+.card-set {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+}
+
+.card-set > .item {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
+
+/*---------- CARD ------------*/
+
+.card:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-content {
+  display: block;
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+.card-thumb {
+  box-shadow: inherit;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+/*  ------спливаюче вікно --------- */
+
+.overlay {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: var(--overlay-color);
+  top: 0;
+  left: 0;
+
+  transform: translateY(100%);
+  transition: transform 250ms var(--cubic);
+}
+
+.link-card:hover .overlay,
+.link-card:focus .overlay {
+  transform: translateY(0);
+}
+
+.text {
+  font-weight: 400;
+  font-family: "roboto";
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--white-text);
+}
+/* -----Чим займаємся підписи тексту----- */
+.product-service {
+  overflow: hidden;
+  position: relative;
+}
+.product-service > .prefix {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  margin: 0;
+  width: 100%;
+  height: 70px;
+  font-family: "roboto";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  background-color: var(--grey-prozoriy);
+  color: var(--white-text);
+}
+
+.prefix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ul-what-we-do {
+  display: flex;
+  justify-content: space-between;
+}
