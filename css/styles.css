@@ -82,12 +82,12 @@ a {
   font-size: 26px;
   letter-spacing: 0.03em;
 }
-.active .nav-page {
+.nav__page--active .nav__page {
   color: var(--blue-text);
   position: relative;
   display: block;
 }
-.active .nav-page::after {
+.nav__page--active .nav__page::after {
   content: "";
   display: block;
   width: 100%;
@@ -97,7 +97,7 @@ a {
   position: absolute;
   bottom: -1px;
 }
-.nav-page {
+.nav__page {
   margin-left: 50px;
   padding: 32px 0;
   font-family: "roboto";
@@ -106,11 +106,11 @@ a {
   color: var(--black-text);
   letter-spacing: 0.02em;
 }
-.nav-contacts:hover {
+.nav__contacts:hover {
   color: var(--blue-text);
   transition: color 250ms var(--cubic);
 }
-.nav-contacts {
+.nav__contacts {
   display: flex;
   padding-left: 50px;
   font-family: "roboto";
@@ -121,7 +121,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-.svg-contacts {
+.nav__svg {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -140,7 +140,7 @@ a {
   max-width: 1600px;
   text-align: center;
 }
-.container-hero {
+.hero__container {
   padding: 200px 0;
   max-width: 1200px;
   margin-left: auto;
@@ -149,7 +149,7 @@ a {
   padding-right: 15px;
 }
 
-.hero-text {
+.hero__text {
   font-family: "roboto";
   font-size: 44px;
   font-weight: 900;
@@ -159,7 +159,7 @@ a {
   letter-spacing: 0.06em;
 }
 
-.button-zakaz {
+.button__zakaz {
   margin-top: 30px;
   border: 0;
   padding: 10px 32px;
@@ -175,7 +175,7 @@ a {
   transition: background-color 250ms var(--cubic), color 250ms var(--cubic),
     box-shadow 250ms var(--cubic);
 }
-.button-zakaz:hover {
+.button__zakaz:hover {
   color: var(--blue-text);
   letter-spacing: 0.06em;
   background-color: var(--white-text);
@@ -224,7 +224,7 @@ a {
   transition: transform 250ms var(--cubic);
 }
 
-.modal .closed {
+.modal .modal__closed {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -238,12 +238,12 @@ a {
   align-items: center;
   fill: var(--black);
 }
-.modal .closed:hover,
-.modal .closed:focus {
+.modal .modal__closed:hover,
+.modal .modal__closed:focus {
   fill: var(--blue-text);
 }
 
-.form-title {
+.modal__title {
   justify-content: space-between;
   font-family: "roboto";
   font-weight: 700;
@@ -258,23 +258,23 @@ a {
   margin-left: auto;
 }
 
-.form-field {
+.form__field {
   display: block;
   position: relative;
   justify-content: center;
 }
-.form-field:nth-child(-n + 3) {
+.form__field:nth-child(-n + 3) {
   margin-bottom: 28px;
 }
 
-.form-label {
+.form__label {
   position: absolute;
   top: -50%;
   left: 0px;
   color: var(--grey-text);
 }
 
-.form-input {
+.form__input {
   padding: 10px 10px 10px 40px;
   width: 100%;
   font-size: 16px;
@@ -283,12 +283,12 @@ a {
   border-radius: 4px;
   border: 1px solid var(--border-modal-color);
 }
-.form-input:hover,
-.form-input:focus {
+.form__input:hover,
+.form__input:focus {
   border: 1px solid var(--blue-text);
 }
 
-.icon {
+.form__icon {
   position: absolute;
   top: 50%;
   left: 12px;
@@ -298,28 +298,28 @@ a {
   background-color: transparent;
   fill: var(--black-text);
 }
-.form-input:focus ~ .icon,
-.form-input:hover ~ .icon {
+.form__input:focus ~ .form__icon,
+.form__input:hover ~ .form__icon {
   fill: var(--blue-text);
 }
-.form-textarea {
+.form__textarea {
   width: 100%;
   border: 1px solid var(--border-modal-color);
   padding: 12px;
   display: block;
   resize: none;
 }
-.form-textarea:hover {
+.form__textarea:hover {
   border-color: var(--blue-text);
 }
-.form-field .coment {
+.form__field .coment {
   display: flex;
 
   top: -50%;
   color: var(--grey-text);
   transform: translateY(-3px);
 }
-.form-textarea::placeholder {
+.form__textarea::placeholder {
   font-family: "Roboto";
   color: var(--placeholder);
   font-size: 14px;
@@ -327,7 +327,7 @@ a {
 }
 /* ------------------------ */
 
-.text-agree {
+.form__agree {
   color: var(--grey-text);
   font-family: "roboto";
   font-size: 14px;
@@ -335,7 +335,7 @@ a {
   margin-left: 7px;
   margin-right: 2px;
 }
-.submit {
+.form__botton {
   margin-top: 30px;
   display: block;
   margin-left: auto;
@@ -353,7 +353,7 @@ a {
   font-size: 16px;
   line-height: 1.8;
 }
-.deal {
+.form__link {
   color: var(--blue-text);
   margin-left: 2px;
   font-family: "roboto";
@@ -361,7 +361,7 @@ a {
   font-size: 14px;
   line-height: 1.714;
 }
-.checkbox {
+.form__checkbox {
   /* appearance: none; */
   position: absolute;
   width: 1px;
@@ -373,14 +373,14 @@ a {
   overflow: hidden;
 }
 
-.check-icon {
+.form__icon--check {
   border: 2px solid var(--black-text);
   border-radius: 2px;
   margin-top: 10px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transform: translateY(2px);
 }
-.checkbox:checked + .check-icon {
+.form__checkbox:checked + .form__icon--check {
   border-color: transparent;
   background-size: contain;
   background-origin: border-box;
@@ -390,7 +390,7 @@ a {
 
 /* --------Блок лапші--------- */
 
-.container-approach {
+.container__approach {
   padding: 94px 0;
   max-width: 1200px;
   margin-left: auto;
@@ -398,17 +398,17 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-.ul-approach {
+.list__approach {
   display: flex;
   justify-content: space-between;
 }
-.con-approach-svg {
+.inner__approach {
   padding: 25px 0 25px;
   margin-bottom: 30px;
   background-color: var(--buutom-bac);
   border-radius: 4px;
 }
-.approach-svg {
+.approach__svg {
   margin-left: auto;
   margin-right: auto;
   display: block;
@@ -422,7 +422,7 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.14;
 }
-.approach-text {
+.approach__text {
   max-width: 270px;
   font-family: "roboto";
   font-size: 14px;
@@ -434,7 +434,7 @@ a {
 
 /*---- Блок Чим Займаємось ------ */
 
-.container-what-we-do {
+.bloc-what-we-do {
   margin-bottom: 94px;
   max-width: 1200px;
   margin-left: auto;
@@ -442,7 +442,7 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-.what-we-do {
+.bloc-what-we-do__slogan {
   padding-bottom: 50px;
   text-align: center;
   font-family: "roboto";
@@ -459,10 +459,10 @@ a {
 
 /* ---Наша команда--- */
 
-.our-them {
+.bloc-our-them {
   background-color: var(--buutom-bac);
 }
-.container-them {
+.bloc-our-them__container {
   padding: 94px 0;
   max-width: 1200px;
   margin-left: auto;
@@ -470,7 +470,7 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-.team {
+.bloc-our-them__slogan {
   margin-bottom: 50px;
   text-align: center;
   font-family: "roboto";
@@ -480,7 +480,7 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.16;
 }
-.team-name {
+.team__name {
   margin-bottom: 10px;
   font-family: "roboto";
   font-size: 16px;
@@ -489,7 +489,7 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.18;
 }
-.team-text {
+.team__text {
   font-family: "roboto";
   font-size: 16px;
   font-weight: 400;
@@ -497,7 +497,7 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.18;
 }
-.ul-svg-links {
+.team__list-svg {
   margin-top: 16px;
   max-width: 270px;
   display: flex;
@@ -505,7 +505,7 @@ a {
   align-items: center;
   justify-content: space-around;
 }
-.social-link {
+.team__social-link {
   color: var(--social-networks);
   width: 44px;
   height: 44px;
@@ -516,13 +516,13 @@ a {
   fill: var(--social-networks);
   background-color: rgba(255, 255, 255, 0.1);
 }
-.svg-links {
+.team__svg {
   justify-content: center;
   align-items: center;
   fill: currentColor;
 }
 
-.social-link:hover {
+.team__social-link:hover {
   border-radius: 50%;
   color: #ffffff;
   background-color: var(--blue-text);
@@ -530,7 +530,7 @@ a {
 
 /* Карточки команди */
 
-.card-team {
+.team__list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -540,13 +540,13 @@ a {
   margin-left: calc(-1 * var(--team-card-set-gap));
   margin-top: calc(-1 * var(--team-card-set-gap));
 }
-.card-team > .item {
+.team__list > .team__item {
   flex-basis: calc(100% / 4 - var(--card-set-gap));
   margin-left: var(--team-card-set-gap);
   margin-top: var(--team-card-set-gap);
 }
 
-.team-card {
+.team__card {
   margin-bottom: 94px;
   box-shadow: var(--team-card-shadow);
   border-radius: 0px 0px 4px 4px;
@@ -554,13 +554,13 @@ a {
   background-color: var(--white-text);
 }
 
-.team-card-content {
+.team__card-content {
   text-align: center;
   padding: 30px 32px;
 }
 /*  Постійні клієнти */
 
-.client {
+.block-client {
   padding: 94px;
   max-width: 1200px;
   margin-left: auto;
@@ -570,7 +570,7 @@ a {
 
   text-align: center;
 }
-.title-client {
+.block-client__title {
   margin-bottom: 50px;
   font-family: "roboto";
   font-size: 36px;
@@ -579,17 +579,17 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.16;
 }
-.ul-client {
+.block-client__list {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.client-link {
+.block-client__link {
   fill: var(--social-networks);
   background-color: transparent;
 }
-.con-client-svg {
+.block-client__svg {
   width: 170px;
   height: 90px;
   border-radius: 4px;
@@ -600,7 +600,7 @@ a {
   align-items: center;
 }
 
-.con-client-svg:hover {
+.block-client__svg:hover {
   border-color: var(--blue-text);
   fill: var(--blue-text);
 }
@@ -610,7 +610,7 @@ a {
 .footer {
   background-color: var(--dark-grey-bac);
 }
-.containers-footer {
+.footer__containers {
   display: flex;
   padding: 60px 0;
   max-width: 1200px;
@@ -619,14 +619,14 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-.container-address {
+.footer__address {
   margin-right: 70px;
 }
-.logo-footer {
+.footer__logo {
   display: inline-block;
   margin-bottom: 20px;
 }
-.map {
+.footer__map {
   display: inline-block;
   margin-bottom: 9px;
   font-family: "roboto";
@@ -637,7 +637,7 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.71;
 }
-.footer-address {
+.footer__link-address {
   display: inline-block;
   margin-bottom: 9px;
   font-family: "roboto";
@@ -647,10 +647,10 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.71;
 }
-.address {
+.footer__address {
   font-style: normal;
 }
-.footer-title {
+.footer__title {
   color: var(--white-text);
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -660,7 +660,7 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.16;
 }
-.con-footer-link {
+.footer__link-con {
   width: 206px;
 }
 /* ---------Подписка---------- */
@@ -838,11 +838,11 @@ a {
   color: var(--white-text);
 }
 /* -----Чим займаємся підписи тексту----- */
-.product-service {
+.bloc-what-we-do__service {
   overflow: hidden;
   position: relative;
 }
-.product-service > .prefix {
+.bloc-what-we-do__service > .bloc-what-we-do__prefix {
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -858,12 +858,12 @@ a {
   color: var(--white-text);
 }
 
-.prefix {
+.bloc-what-we-do__prefix {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.ul-what-we-do {
+.bloc-what-we-do__list {
   display: flex;
   justify-content: space-between;
 }
