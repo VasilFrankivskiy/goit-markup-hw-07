@@ -667,27 +667,27 @@ a {
 .subscription {
   margin-left: 50px;
 }
-.sing-title {
+.subscription__title {
   color: #ffffff;
   font-family: "roboto";
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 }
-.sign-imput {
-  width: 358px;
+.subscription__imput {
+  width: 348px;
   margin-top: 20px;
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
   padding: 15px;
 }
-.sign-imput::placeholder {
+.subscription__imput::placeholder {
   font-family: "roboto";
   font-size: 16px;
   font-weight: 400;
 }
-.sign {
+.subscription__button {
   align-items: center;
   margin-left: 12px;
   border: 0;
@@ -702,7 +702,7 @@ a {
   padding: 6px 0 10px 29px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-.svg-litachok {
+.subscription__svg {
   margin-right: 28px;
   margin-left: 10px;
   transform: translateY(7px);
@@ -714,20 +714,20 @@ a {
 .portfolio {
   padding: 94px 0;
 }
-.container-portfolio {
+.portfolio__container {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-.ul-button {
+.portfolio__button-list {
   display: flex;
   text-align: center;
   justify-content: center;
   padding-bottom: 34px;
 }
-.portfol-button {
+.portfolio__button {
   padding: 6px 22px;
   margin-right: 8px;
   background-color: var(--buutom-bac);
@@ -741,7 +741,7 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.62;
 }
-.portfol-button:hover {
+.portfolio__button:hover {
   color: var(--white-text);
   background-color: var(--blue-text);
   border: 0;
