@@ -159,7 +159,7 @@ a {
   letter-spacing: 0.06em;
 }
 
-.button__zakaz {
+.button-zakaz {
   margin-top: 30px;
   border: 0;
   padding: 10px 32px;
@@ -175,7 +175,7 @@ a {
   transition: background-color 250ms var(--cubic), color 250ms var(--cubic),
     box-shadow 250ms var(--cubic);
 }
-.button__zakaz:hover {
+.button-zakaz:hover {
   color: var(--blue-text);
   letter-spacing: 0.06em;
   background-color: var(--white-text);
@@ -390,7 +390,7 @@ a {
 
 /* --------Блок лапші--------- */
 
-.container__approach {
+.approach__container {
   padding: 94px 0;
   max-width: 1200px;
   margin-left: auto;
@@ -398,22 +398,22 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-.list__approach {
+.approach-card__list {
   display: flex;
   justify-content: space-between;
 }
-.inner__approach {
+.approach-card__inner {
   padding: 25px 0 25px;
   margin-bottom: 30px;
   background-color: var(--buutom-bac);
   border-radius: 4px;
 }
-.approach__svg {
+.approach-card__svg {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
-.approach {
+.approach-card__title {
   font-family: "roboto";
   font-size: 14px;
   font-weight: 700;
@@ -422,7 +422,7 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.14;
 }
-.approach__text {
+.approach-card__text {
   max-width: 270px;
   font-family: "roboto";
   font-size: 14px;
@@ -434,7 +434,7 @@ a {
 
 /*---- Блок Чим Займаємось ------ */
 
-.bloc-what-we-do {
+.what-we-do__container {
   margin-bottom: 94px;
   max-width: 1200px;
   margin-left: auto;
@@ -442,7 +442,7 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-.bloc-what-we-do__slogan {
+.what-we-do__slogan {
   padding-bottom: 50px;
   text-align: center;
   font-family: "roboto";
@@ -459,10 +459,10 @@ a {
 
 /* ---Наша команда--- */
 
-.bloc-our-them {
+.our-them {
   background-color: var(--buutom-bac);
 }
-.bloc-our-them__container {
+.our-them__container {
   padding: 94px 0;
   max-width: 1200px;
   margin-left: auto;
@@ -470,7 +470,7 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-.bloc-our-them__slogan {
+.our-them__slogan {
   margin-bottom: 50px;
   text-align: center;
   font-family: "roboto";
@@ -558,7 +558,7 @@ a {
   text-align: center;
   padding: 30px 32px;
 }
-/*  Постійні клієнти */
+/* ---------- Постійні клієнти-------------- */
 
 .block-client {
   padding: 94px;
@@ -838,11 +838,11 @@ a {
   color: var(--white-text);
 }
 /* -----Чим займаємся підписи тексту----- */
-.bloc-what-we-do__service {
+.what-we-do-card__service {
   overflow: hidden;
   position: relative;
 }
-.bloc-what-we-do__service > .bloc-what-we-do__prefix {
+.what-we-do-card__service > .what-we-do-card__prefix {
   position: absolute;
   left: 0px;
   bottom: 0px;
@@ -858,12 +858,12 @@ a {
   color: var(--white-text);
 }
 
-.bloc-what-we-do__prefix {
+.what-we-do-card__prefix {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.bloc-what-we-do__list {
+.what-we-do-card__list {
   display: flex;
   justify-content: space-between;
 }
