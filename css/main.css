@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -533,5 +534,541 @@ a {
   color: var(--grey-text);
   letter-spacing: 0.03em;
   line-height: 1.71;
+}
+
+.what-we-do__container {
+  margin-bottom: 94px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.what-we-do__container__slogan {
+  padding-bottom: 50px;
+  text-align: center;
+  font-family: "roboto";
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black-text);
+  letter-spacing: 0.03em;
+  line-height: 1.16;
+}
+
+.what-we-do-card__service {
+  overflow: hidden;
+  position: relative;
+}
+
+.what-we-do-card .what-we-do-card__service > .what-we-do-card__prefix {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  margin: 0;
+  width: 100%;
+  height: 70px;
+  font-family: "roboto";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  background-color: var(--grey-prozoriy);
+  color: var(--white-text);
+}
+
+.what-we-do-card__prefix {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.what-we-do-card__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.team {
+  background-color: var(--buutom-bac);
+  /* Карточки команди */
+}
+
+.team__container {
+  padding: 94px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.team__slogan {
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: "roboto";
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black-text);
+  letter-spacing: 0.03em;
+  line-height: 1.16;
+}
+
+.team__name {
+  margin-bottom: 10px;
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black-dark-textt);
+  letter-spacing: 0.03em;
+  line-height: 1.18;
+}
+
+.team__text {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--grey-text);
+  letter-spacing: 0.03em;
+  line-height: 1.18;
+}
+
+.team__list-svg {
+  margin-top: 16px;
+  max-width: 270px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.team__social-link {
+  color: var(--social-networks);
+  width: 44px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  fill: var(--social-networks);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.team__social-link:hover, .team__social-link:focus {
+  border-radius: 50%;
+  color: #ffffff;
+  background-color: var(--blue-text);
+}
+
+.team__svg {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  fill: currentColor;
+}
+
+.team__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: calc(-1 * var(--team-card-set-gap));
+  margin-top: calc(-1 * var(--team-card-set-gap));
+}
+
+.team .team__list > .team__item {
+  -ms-flex-preferred-size: calc(100% / 4 - var(--card-set-gap));
+      flex-basis: calc(100% / 4 - var(--card-set-gap));
+  margin-left: var(--team-card-set-gap);
+  margin-top: var(--team-card-set-gap);
+}
+
+.team__card {
+  margin-bottom: 94px;
+  -webkit-box-shadow: var(--team-card-shadow);
+          box-shadow: var(--team-card-shadow);
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+  background-color: var(--white-text);
+}
+
+.team__card-content {
+  text-align: center;
+  padding: 30px 32px;
+}
+
+.client {
+  padding: 94px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+}
+
+.client__title {
+  margin-bottom: 50px;
+  font-family: "roboto";
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black-text);
+  letter-spacing: 0.03em;
+  line-height: 1.16;
+}
+
+.client-card__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.client-card__link {
+  fill: var(--social-networks);
+  background-color: transparent;
+}
+
+.client-card__svg {
+  width: 170px;
+  height: 90px;
+  border-radius: 4px;
+  border: 2px solid currentColor;
+  color: var(--social-networks);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.client-card__svg:hover, .client-card__svg:focus {
+  border-color: var(--blue-text);
+  fill: var(--blue-text);
+}
+
+.client-card__svg:hover {
+  border-color: var(--blue-text);
+  fill: var(--blue-text);
+}
+
+.footer {
+  background-color: var(--dark-grey-bac);
+}
+
+.footer__containers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 60px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.footer__address {
+  margin-right: 70px;
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer__map {
+  display: inline-block;
+  margin-bottom: 9px;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--white-text);
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+}
+
+.footer__link-address {
+  display: inline-block;
+  margin-bottom: 9px;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--grey-text-op60);
+  letter-spacing: 0.03em;
+  line-height: 1.71;
+}
+
+.footer__address {
+  font-style: normal;
+}
+
+.footer-join__title {
+  color: var(--white-text);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1.16;
+}
+
+.footer-join__containers {
+  width: 206px;
+}
+
+.subscription {
+  margin-left: 50px;
+}
+
+.subscription__title {
+  color: #ffffff;
+  font-family: "roboto";
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subscription__imput {
+  width: 348px;
+  margin-top: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: transparent;
+  padding: 15px;
+}
+
+.subscription__imput::-webkit-input-placeholder {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.subscription__imput:-ms-input-placeholder {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.subscription__imput::-ms-input-placeholder {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.subscription__imput::placeholder {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.subscription__button {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 12px;
+  border: 0;
+  border-radius: 4px;
+  color: #ffffff;
+  background-color: var(--blue-text);
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  padding: 6px 0 10px 29px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.subscription__svg {
+  margin-right: 28px;
+  margin-left: 10px;
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+}
+
+.portfolio {
+  padding: 94px 0;
+}
+
+.portfolio__container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.portfolio__button-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 34px;
+}
+
+.portfolio__button {
+  padding: 6px 22px;
+  margin-right: 8px;
+  background-color: var(--buutom-bac);
+  border: 0;
+  border-radius: 4px;
+  color: var(--black-text);
+  font-family: "roboto";
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.03em;
+  line-height: 1.62;
+}
+
+.portfolio__button:hover, .portfolio__button:focus {
+  color: var(--white-text);
+  background-color: var(--blue-text);
+  border: 0;
+  -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.card-set {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap));
+  /*Карточки головного контенту   */
+  /* CARD SET */
+  /*---------- CARD ------------*/
+  /*  ------спливаюче вікно --------- */
+}
+
+.card-set__project-name {
+  font-family: "roboto";
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--black-text);
+  line-height: 2;
+}
+
+.card-set__signature {
+  font-family: "roboto";
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  color: var(--grey-text);
+  line-height: 1.87;
+}
+
+.card-set .card-set > .card-set__item {
+  -ms-flex-preferred-size: calc(100% / 3 - var(--card-set-gap));
+      flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
+
+.card-set .card-set__card:hover {
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.card-set__content {
+  display: block;
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.card-set__thumb {
+  -webkit-box-shadow: inherit;
+          box-shadow: inherit;
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-set__overlay {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: var(--overlay-color);
+  top: 0;
+  left: 0;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 250ms var(--cubic);
+  transition: -webkit-transform 250ms var(--cubic);
+  transition: transform 250ms var(--cubic);
+  transition: transform 250ms var(--cubic), -webkit-transform 250ms var(--cubic);
+}
+
+.card-set .card-set__link:hover .card-set__overlay,
+.card-set .card-set__link:focus .card-set__overlay {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.card-set__text {
+  font-weight: 400;
+  font-family: "roboto";
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--white-text);
 }
 /*# sourceMappingURL=main.css.map */

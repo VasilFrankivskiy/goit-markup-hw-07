@@ -457,17 +457,13 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.16;
 }
-.img-container {
-  justify-content: space-between;
-  display: flex;
-}
 
 /* ---Наша команда--- */
 
-.our-them {
+.team {
   background-color: var(--buutom-bac);
 }
-.our-them__container {
+.team__container {
   padding: 94px 0;
   max-width: 1200px;
   margin-left: auto;
@@ -475,7 +471,7 @@ a {
   padding-left: 15px;
   padding-right: 15px;
 }
-.our-them__slogan {
+.team__slogan {
   margin-bottom: 50px;
   text-align: center;
   font-family: "roboto";
