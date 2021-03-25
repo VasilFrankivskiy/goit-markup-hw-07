@@ -54,6 +54,11 @@ a {
   align-items: center;
   display: flex;
 }
+.contacts {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+}
 .nav__logo--web {
   font-family: "Raleway";
   font-style: normal;
@@ -74,7 +79,7 @@ a {
   letter-spacing: 0.03;
   line-height: 1.15;
 }
-.logo__studio--white {
+.nav__logo--white {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
@@ -106,11 +111,11 @@ a {
   color: var(--black-text);
   letter-spacing: 0.02em;
 }
-.nav__contacts:hover {
+.contacts__Information:hover {
   color: var(--blue-text);
   transition: color 250ms var(--cubic);
 }
-.nav__contacts {
+.contacts__Information {
   display: flex;
   padding-left: 50px;
   font-family: "roboto";
@@ -121,7 +126,7 @@ a {
   justify-content: center;
   align-items: center;
 }
-.nav__svg {
+.contacts__svg {
   margin-right: 10px;
   fill: currentColor;
 }
