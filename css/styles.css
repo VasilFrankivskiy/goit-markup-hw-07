@@ -560,7 +560,7 @@ a {
 }
 /* ---------- Постійні клієнти-------------- */
 
-.block-client {
+.client {
   padding: 94px;
   max-width: 1200px;
   margin-left: auto;
@@ -570,7 +570,7 @@ a {
 
   text-align: center;
 }
-.block-client__title {
+.client__title {
   margin-bottom: 50px;
   font-family: "roboto";
   font-size: 36px;
@@ -579,17 +579,17 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.16;
 }
-.block-client__list {
+.client-card__list {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.block-client__link {
+.client-card__link {
   fill: var(--social-networks);
   background-color: transparent;
 }
-.block-client__svg {
+.client-card__svg {
   width: 170px;
   height: 90px;
   border-radius: 4px;
@@ -600,7 +600,7 @@ a {
   align-items: center;
 }
 
-.block-client__svg:hover {
+.client-card__svg:hover {
   border-color: var(--blue-text);
   fill: var(--blue-text);
 }
@@ -650,7 +650,7 @@ a {
 .footer__address {
   font-style: normal;
 }
-.footer__title {
+.footer-join__title {
   color: var(--white-text);
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -660,7 +660,7 @@ a {
   letter-spacing: 0.03em;
   line-height: 1.16;
 }
-.footer__link-con {
+.footer-join__containers {
   width: 206px;
 }
 /* ---------Подписка---------- */
