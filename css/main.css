@@ -1,4 +1,29 @@
 @charset "UTF-8";
+:root {
+  --social-networks: rgba(175, 177, 184, 1);
+  --overlay-color: rgba(33, 150, 243, 0.9);
+  --cubic: cubic-bezier(0.4, 0, 0.2, 1);
+  --zatemnenya: rgba(0, 0, 0, 0.1);
+  --border-color: rgba(236, 236, 236, 1);
+  --bac-section: rgba(229, 229, 229, 1);
+  --buutom-bac: rgba(245, 244, 250, 1);
+  --black-text: rgba(33, 33, 33, 1);
+  --blue-text: rgba(33, 150, 243, 1);
+  --grey-text: rgba(117, 117, 117, 1);
+  --placeholder: rgba(117, 117, 117, 0.5);
+  --white-text: rgba(255, 255, 255, 1);
+  --grey-text-op60: rgba(255, 255, 255, 0.6);
+  --black-dark-text: rgba(0, 0, 0, 1);
+  --grey-prozoriy: rgba(47, 48, 58, 0.8);
+  --dark-grey-bac: rgba(47, 48, 58, 1);
+  --team-card-set-gap: 30px;
+  --team-card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --card-set-gap: 30px;
+  --card-shadow: ;
+  --border-modal-color: rgba(33, 33, 33, 0.2);
+}
+
 *,
 *::before,
 *::after {
@@ -30,6 +55,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.hide {
+  height: 0px;
+  overflow: hidden;
 }
 
 .header {
@@ -494,7 +524,7 @@ a {
   padding-right: 15px;
 }
 
-.approach__container-card__list {
+.approach-card__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -503,20 +533,20 @@ a {
           justify-content: space-between;
 }
 
-.approach__container-card__inner {
+.approach-card__inner {
   padding: 25px 0 25px;
   margin-bottom: 30px;
   background-color: var(--buutom-bac);
   border-radius: 4px;
 }
 
-.approach__container-card__svg {
+.approach-card__svg {
   margin-left: auto;
   margin-right: auto;
   display: block;
 }
 
-.approach__container-card__title {
+.approach-card__title {
   font-family: "roboto";
   font-size: 14px;
   font-weight: 700;
@@ -526,7 +556,7 @@ a {
   line-height: 1.14;
 }
 
-.approach__container-card__text {
+.approach-card__text {
   max-width: 270px;
   font-family: "roboto";
   font-size: 14px;
@@ -545,7 +575,7 @@ a {
   padding-right: 15px;
 }
 
-.what-we-do__container__slogan {
+.what-we-do__slogan {
   padding-bottom: 50px;
   text-align: center;
   font-family: "roboto";
@@ -559,22 +589,6 @@ a {
 .what-we-do-card__service {
   overflow: hidden;
   position: relative;
-}
-
-.what-we-do-card .what-we-do-card__service > .what-we-do-card__prefix {
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  margin: 0;
-  width: 100%;
-  height: 70px;
-  font-family: "roboto";
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
-  background-color: var(--grey-prozoriy);
-  color: var(--white-text);
 }
 
 .what-we-do-card__prefix {
@@ -596,6 +610,22 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.what-we-do-card__service > .what-we-do-card__prefix {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  margin: 0;
+  width: 100%;
+  height: 70px;
+  font-family: "roboto";
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  background-color: var(--grey-prozoriy);
+  color: var(--white-text);
 }
 
 .team {

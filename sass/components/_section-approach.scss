@@ -1,10 +1,12 @@
-.approach__container {
-  padding: 94px 0;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+.approach {
+  &__container {
+    padding: 94px 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
   &-card__list {
     display: flex;
